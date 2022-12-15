@@ -148,9 +148,10 @@ const camera = new THREE.PerspectiveCamera(
 );
 const cameraPosition = {
     x: 0,
-    y: 4,
-    z: 4,
+    y: window.innerWidth < window.innerHeight ? 5.5 : 4,
+    z: window.innerWidth < window.innerHeight ? 5.5 : 4,
 };
+
 camera.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
 camera.lookAt(player.position);
 scene.add(camera);
