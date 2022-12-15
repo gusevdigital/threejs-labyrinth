@@ -1,0 +1,130 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.victory {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255,255, 0.4);
+    padding: 3rem 4rem;
+    display: none;
+}
+
+.victory.active {
+    display: flex;
+}
+
+.victory h1 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.victory button {
+    font-size: 1.4rem;
+    font-weight: normal;
+    background-color: #FABB04;
+    color: black;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
+    transition: box-shadow .2s ease-in-out;
+}
+
+.victory button:hover {
+    box-shadow: 0 2px 6px 0px rgba(0,0,0,0.2);
+}
+
+.controls {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    /* background-color: rgba(0,0,0,0.1); */
+}
+
+.controls button {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    transition: background-color .150s ease-in-out;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.controls button svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.controls button svg path {
+    fill: white;
+}
+
+.controls button.up {
+    transform: translateX(-50%) rotate(-90deg);
+    top: 0;
+    left: 50%;
+}
+
+.controls button.left {
+    transform: translateY(-50%) rotate(-180deg);
+    left: 0;
+    top: 50%;
+}
+
+.controls button.right {
+    transform: translateY(-50%);
+    right: 0;
+    top: 50%;
+}
+
+.controls button.down {
+    transform: translateX(-50%) rotate(90deg);
+    left: 50%;
+    bottom: 0;
+}
